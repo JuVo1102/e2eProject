@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbDataService } from 'src/app/services/db-data/db-data.service';
 
 @Component({
   selector: 'app-notes-detail',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesDetailPage implements OnInit {
 
-  constructor() { }
+  private noteTitle: string;
+  private noteText: string;
 
-  ngOnInit() {
+  constructor(
+    private dbDataService: DbDataService
+  ) { }
+  // Initializes the page and recieves email data from the database
+  async ngOnInit() {
+    try {
+      this.noteTitle = this.dbDataService.getDbDataTitle();
+      this.noteText = this.dbDataService.getDbDataText();
+    } catch (error) {
+      throw error;
+    }
   }
-
 }
