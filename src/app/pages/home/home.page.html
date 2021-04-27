@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
+<!-- Header -->
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <!-- Logo -->
+    <ion-item lines="none">
+      <ion-label class="ion-text-center">
+        Notes
+      </ion-label>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<!-- Button-list -->
+<ion-content forceOverscroll="false">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col class="ion-text-center">
+        <ion-list>
+          <!-- Different note-titles -->
+          <ng-container>
+            <ion-item button *ngFor="let title of noteTitles" (click)="SelectNote(title)">
+              <ion-label class="ion-text-center">
+                {{ title }}
+              </ion-label>
+            </ion-item>
+          </ng-container>
+        </ion-list>
+        <!-- New note-button -->
+        <ion-item button (click)="NewNote()">
+          <ion-label class="ion-text-center">
+            <ion-icon name="add-circle-outline">
+            </ion-icon>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

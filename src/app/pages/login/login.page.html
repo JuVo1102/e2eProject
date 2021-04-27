@@ -1,9 +1,54 @@
+<!-- Header -->
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-item lines="none">
+      <ion-title class="ion-text-center">
+        Login
+      </ion-title>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<!-- Button-list -->
+<ion-content forceOverscroll="false">
+  <ion-grid>
+    <!-- Form -->
+    <ion-row>
+      <ion-col>
+        <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+          <!-- Email input -->
+          <ion-item>
+            <ion-label position="floating">
+              E-Mail
+            </ion-label>
+            <ion-input formControlName="email" type="email" required></ion-input>
+          </ion-item>
+          <!-- Password input -->
+          <ion-item>
+            <ion-label position="floating">
+              Password
+            </ion-label>
+            <ion-input formControlName="password" type="password" required></ion-input>
+          </ion-item>
+        </form>
+      </ion-col>
+    </ion-row>
+    <!-- Buttons -->
+    <ion-row>
+      <ion-col>
+        <!-- Loginbutton -->
+        <ion-button type="submit" expand="full" color="primary" (click)="submitForm()" [disabled]="!loginForm.valid">
+          Login
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <!-- Registrybutton -->
+        <ion-button routerLink="/registry" expand="full" color="primary">
+          Registry
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,9 +1,40 @@
+<!-- Header -->
 <ion-header>
   <ion-toolbar>
-    <ion-title>new-note</ion-title>
+    <!-- Back button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <!-- Title -->
+    <ion-title class="ion-text-center ion-no-padding">
+      Create new Note
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<!-- Button-list -->
+<ion-content forceOverscroll="false">
+  <ion-grid style="height: 100%; display: flex; flex-flow: column;">
+    <ion-row style="flex-grow: 1;">
+      <ion-col>
+        <form [formGroup]="notesForm" (ngSubmit)="CreateNewNote()" style="flex-grow:1;" method="post">
+          <!-- Title -->
+          <ion-item>
+            <ion-label position="floating">
+              Note Title
+            </ion-label>
+            <ion-input formControlName="title"></ion-input>
+          </ion-item>
+          <!-- Notes Textarea -->
+          <ion-label position="floating">
+          </ion-label>
+          <ion-textarea rows="19" formControlName="text">
+          </ion-textarea>
+          <ion-button (click)="CreateNewNote()" expand="full" color="primary">
+            Create
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
