@@ -72,20 +72,6 @@ describe('e2eProject', () => {
       const clickable: boolean = await login.checkButtonClickable(buttonIdentifier);
       expect(clickable).toBeTrue;
     });
-
-    // it('should navigate to the homepage after successfull login', async () => {
-    //   const emailContent = "test@Email.de";
-    //   const passwordContent = "testPassword1";
-    //   const buttonIdentifier = `ion-button[type="submit"]`;
-    //   const homePageTitle = "Notes";
-
-    //   await login.writeInput('email', emailContent);
-    //   await login.writeInput('password', passwordContent);
-    //   await login.clickButton(buttonIdentifier);
-
-    //   const title = await homepage.getTitle();
-    //   expect(title).toEqual(homePageTitle);
-    // });
   });
 
   describe('registry', () => {
@@ -161,22 +147,6 @@ describe('e2eProject', () => {
       const clickable: boolean = await registry.checkButtonClickable(buttonIdentifier);
       expect(clickable).toBeTrue;
     });
-
-    // it('should navigate to the homepage after successfull registration', async () => {
-    //   const emailContent = "test2@Email.de";
-    //   const passwordContent = "testPassword1";
-    //   const confirmPassword = "testPassword1";
-    //   const buttonIdentifier = `ion-button[type="submit"]`;
-    //   const homePageTitle = "Notes";
-
-    //   await registry.writeInput('email', emailContent);
-    //   await registry.writeInput('password', passwordContent);
-    //   await registry.writeInput('confirmPassword', confirmPassword);
-    //   await registry.clickButton(buttonIdentifier);
-
-    //   const title = await homepage.getTitle();
-    //   expect(title).toEqual(homePageTitle);
-    // });
   });
 
   describe('homepage', () => {
