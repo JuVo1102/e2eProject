@@ -16,8 +16,8 @@ exports.config = {
       // deployen, dann muss hier der Pfad zur APK angegeben werden.
       browserName: '',
       app: 'platforms/android/app/build/outputs/apk/debug/app-debug.apk',
-      appPackage: 'io.e2e.project',
-      appActivity: 'io.e2e.project.MainActivity',
+      appPackage: 'de.gfa.GfAPlus',
+      appActivity: 'de.gfa.GfAPlus.MainActivity',
       platformName: 'Android',
       platformVersion: '9.0',
       deviceName: 'Testdroid', // was hier steht ist egal, darf aber nicht leer sein

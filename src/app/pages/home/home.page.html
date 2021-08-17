@@ -3,9 +3,9 @@
   <ion-toolbar>
     <!-- Logo -->
     <ion-item lines="none">
-      <ion-label class="ion-text-center">
+      <ion-title class="ion-text-center ion-no-padding">
         Notes
-      </ion-label>
+      </ion-title>
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -19,14 +19,14 @@
           <!-- Different note-titles -->
           <ng-container>
             <ion-item button *ngFor="let title of noteTitles" (click)="SelectNote(title)">
-              <ion-label class="ion-text-center">
+              <ion-label class="ion-text-center" [id]="title">
                 {{ title }}
               </ion-label>
             </ion-item>
           </ng-container>
         </ion-list>
         <!-- New note-button -->
-        <ion-item button (click)="NewNote()">
+        <ion-item button (click)="NewNote()" id="createNote">
           <ion-label class="ion-text-center">
             <ion-icon name="add-circle-outline">
             </ion-icon>

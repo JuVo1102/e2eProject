@@ -49,12 +49,13 @@
         </ion-button>
         <!-- Validation-warnings -->
         <ion-label class="ion-text-center" style="color:red"
-          *ngIf="registryForm.value.password != registryForm.value.confirmPassword">
+          *ngIf="registryForm.value.password != registryForm.value.confirmPassword"
+          id="passwordNotification">
           Password not identical
         </ion-label>
         <p></p>
         <ion-label class="ion-text-center" style="color:red"
-          *ngIf="registryForm.valid == false">
+          *ngIf="registryForm.valid == false" id="generalNotification">
           Password needs to contain:
           1. A capital letter
           2. A number
