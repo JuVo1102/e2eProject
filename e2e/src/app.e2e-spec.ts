@@ -1,4 +1,4 @@
-import { browser, ExpectedConditions } from 'protractor';
+import { browser, ExpectedConditions, WebDriver } from 'protractor';
 import { AppPage } from './app.po';
 import { HomePage } from './home-page.po';
 import { LoginPage } from './login-page.po';
@@ -78,8 +78,8 @@ describe('e2eProject', () => {
     beforeEach(async () => {
       await login.load();
       const buttonIdentifier = `ion-button[routerLink="/registry"]`;
-      const loginButton = await login.getElement(buttonIdentifier);
-      await loginButton.click();
+      const registryButton = await login.getElement(buttonIdentifier);
+      await registryButton.click();
     });
 
     it('should have a title named Registry', async () => {
@@ -156,12 +156,11 @@ describe('e2eProject', () => {
       const passwordContent = "testPassword1";
       const buttonIdentifier = `ion-button[type="submit"]`;
       const loginButton = await login.getElement(buttonIdentifier);
-
+      
       await login.writeInput('email', emailContent);
-      await login.writeInput('password', passwordContent);
-
-      await browser.wait(ExpectedConditions.elementToBeClickable(loginButton), 3000);
-      await loginButton.click()
+      await login.writeInput('password', passwordContent);   
+      await login.checkButtonClickable(buttonIdentifier);  
+      await loginButton.click();
     });
 
     it('should have a title named Notes', async () => {
@@ -179,7 +178,7 @@ describe('e2eProject', () => {
 
   describe('new-note', () => {
     beforeEach(async () => {
-      await login.load();
+      await login.load();    
       const emailContent = "test@Email.de";
       const passwordContent = "testPassword1";
       const loginButtonIdentifier = `ion-button[type="submit"]`;
@@ -193,9 +192,10 @@ describe('e2eProject', () => {
 
       const newNoteButtonIdentifier = `ion-item[id="createNote"]`;
       const newNoteButton = await home.getElement(newNoteButtonIdentifier);
-      await home.waitUntilVisible(newNoteButton);
+
       await browser.wait(ExpectedConditions.elementToBeClickable(newNoteButton), 3000);
       await newNoteButton.click();
+      browser.manage().timeouts().implicitlyWait(1000);
     });
 
     it('should have a title named Create New Note', async () => {
@@ -228,6 +228,8 @@ describe('e2eProject', () => {
       const title = "title";
       const content = "content";
       const buttonIdentifier = `ion-button[id="Create"]`;
+      const titleElement = newNote.getElement('ion-title');
+      await browser.wait(ExpectedConditions.elementToBeClickable(titleElement), 4000);
 
       await newNote.writeInput('title', title);
       await newNote.writeTextfield('text', content);
@@ -235,7 +237,7 @@ describe('e2eProject', () => {
       const newNoteButton = await newNote.getElement(buttonIdentifier);
       const textfieldContent = await newNote.getTextfieldText("text");
       if(textfieldContent.length > 0) {
-        await browser.driver.hideSoftKeyboard();  
+        await titleElement.click()
       }
 
       await newNoteButton.click();

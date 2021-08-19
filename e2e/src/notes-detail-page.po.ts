@@ -8,7 +8,7 @@ export class notesDetailPage extends PageObjectBase {
 
     async getTextfieldContent() {
         const textArea = this.getElement("ion-textarea");
-        await browser.wait(ExpectedConditions.elementToBeClickable(textArea), 3000);
+        await browser.wait(ExpectedConditions.elementToBeClickable(textArea), 4000);
         return await textArea.getText();
     }
 }

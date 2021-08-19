@@ -26,7 +26,7 @@ export class PageObjectBase {
   }
 
   getElement(wantedElement: string) {
-    return element(by.deepCss(`${this.tag} ${wantedElement}`));
+    return element(by.css(`${this.tag} ${wantedElement}`));
   }
 
   waitUntilInvisible() {
@@ -54,54 +54,45 @@ export class PageObjectBase {
   }
 
   async getTitle() {
-    const wantedElement = this.getElement("ion-title");
+    const wantedElement = this.getElement('ion-title');
     await this.waitUntilVisible(wantedElement);
     return wantedElement.getText();
   }
 
-  protected enterInputText(selectedElement: ElementFinder, text: string) {
+  async enterInputText(selectedElement: ElementFinder, text: string) {
     const inp = selectedElement.element(by.css('input'));
-    inp.sendKeys(text);
+    await inp.sendKeys(text);
   }
 
-  enterTextareaText(selectedElement: ElementFinder, text: string) {
+  async enterTextareaText(selectedElement: ElementFinder, text: string) {
     const inp = selectedElement.element(by.css('textarea'));
-    inp.sendKeys(text);
-  }
-
-  async clickButton(sel: string) {
-    const el = element(by.css(`${this.tag}${sel}`));
-    await browser.wait(ExpectedConditions.elementToBeClickable(el));
-    el.click();
+    await inp.sendKeys(text);
   }
 
   async writeInput(input: string, text: string): Promise<void> {
     const ionTextfield = this.getElement(`ion-item ion-input[formControlName="${input}"]`);
-    await this.waitUntilVisible(ionTextfield);
-    await browser.wait(ExpectedConditions.elementToBeClickable(ionTextfield), 3000);
+    await browser.wait(ExpectedConditions.elementToBeClickable(ionTextfield), 4000);
     await ionTextfield.click();
     await this.enterInputText(ionTextfield, text);
   }
 
   async writeTextfield(input: string, text: string): Promise<void> {
     const ionTextfield = this.getElement(`ion-textarea[formControlName="${input}"]`);
-    
-    await this.waitUntilVisible(ionTextfield);
-    await browser.wait(ExpectedConditions.elementToBeClickable(ionTextfield), 3000);
+    await browser.wait(ExpectedConditions.elementToBeClickable(ionTextfield), 4000);
     await ionTextfield.click();
     await this.enterTextareaText(ionTextfield, text);
   }
 
   async getInputText(input: string): Promise<string> {
     const ionTextfield = this.getElement(`ion-item ion-input[formControlName="${input}"]`);
-    await this.waitUntilVisible(ionTextfield);
+    await browser.wait(ExpectedConditions.visibilityOf(ionTextfield), 4000);
     const inputContent = await ionTextfield.getAttribute("value");
     return inputContent;
   }
 
   async getTextfieldText(input: string): Promise<string> {
     const ionTextfield = this.getElement(`ion-textarea[formControlName="${input}"]`);
-    await this.waitUntilVisible(ionTextfield);
+    await browser.wait(ExpectedConditions.visibilityOf(ionTextfield), 4000);
     const inputContent = await ionTextfield.getAttribute("value");
     return inputContent;
   }

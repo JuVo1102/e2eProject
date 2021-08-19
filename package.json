@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "appium-android": "ionic cordova build android && ng e2e --protractorConfig=e2e/protractor.appium.android.conf.js"
+    "appium-android": "ionic cordova build android && ng e2e --protractorConfig=e2e/protractor.appium.android.conf.js",
+    "appium-ios": "ionic cordova build ios && ng e2e --protractorConfig=e2e/protractor.appium.ios.conf.js"
   },
   "private": true,
   "dependencies": {
@@ -48,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
     "cordova-android": "^9.1.0",
+    "cordova-ios": "^6.2.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.2.1",
@@ -83,7 +85,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

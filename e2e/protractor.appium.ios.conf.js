@@ -11,16 +11,18 @@ exports.config = {
   ],
   multiCapabilities: [
     {
-      // Das sind die Appium Einstellungen. Wir deployen die Anwendung vorher selbst auf dem Gerät und geben hier
+      // Das sind die Appium Einstellungen. Wir geben hier
       // den Namen des Packages und der MainActivity an. Appium kann die App auch automatisch auf dem Gerät
       // deployen, dann muss hier der Pfad zur APK angegeben werden.
       browserName: '',
-      app: 'platforms/android/app/build/outputs/apk/debug/app-debug.apk',
-      appPackage: 'de.gfa.GfAPlus',
-      appActivity: 'de.gfa.GfAPlus.MainActivity',
-      platformName: 'Android',
-      platformVersion: '9.0',
-      deviceName: 'Testdroid', // was hier steht ist egal, darf aber nicht leer sein
+      app: 'platforms/ios/build/emulator/MyApp.app',
+      appPackage: 'io.e2e.project',
+      appActivity: 'io.e2e.project.MainActivity',
+      platformName: 'ios',
+      platformVersion: '14.5',
+      automationName: 'XCUITest',
+      deviceName: 'iPhone 11', // Angabe des Emulators ist wichtig
+      udid: "BEBC694C-27EB-4775-8EC7-1EC2033327DB",
       autoAcceptAlerts: 'true',
       // Vorsicht bei der Rechtschreibung, ein groß geschriebenes 'V' verhinderte bei uns die Testausführung
       autoWebview: true,
@@ -35,7 +37,7 @@ exports.config = {
   maxSessions: 1,
   directConnect: false,
   seleniumAddress: 'http://localhost:4723/wd/hub',
-  baseUrl: 'http://localhost/',
+  baseUrl: 'ionic://localhost/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
@@ -43,7 +45,7 @@ exports.config = {
     print: function() {}
   },
   onPrepare() {
-    browser.baseUrl = 'http://localhost/';
+    browser.baseUrl = 'ionic://localhost/';
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.json')
     });

@@ -11,7 +11,7 @@ exports.config = {
   ],
   multiCapabilities: [
     {
-      // Das sind die Appium Einstellungen. Wir deployen die Anwendung vorher selbst auf dem Gerät und geben hier
+      // Das sind die Appium Einstellungen. Wir geben hier
       // den Namen des Packages und der MainActivity an. Appium kann die App auch automatisch auf dem Gerät
       // deployen, dann muss hier der Pfad zur APK angegeben werden.
       browserName: '',
