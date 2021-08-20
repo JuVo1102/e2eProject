@@ -78,8 +78,9 @@ describe('e2eProject', () => {
     beforeEach(async () => {
       await login.load();
       const buttonIdentifier = `ion-button[routerLink="/registry"]`;
-      const registryButton = await login.getElement(buttonIdentifier);
+      const registryButton = await login.getElement(buttonIdentifier);     
       await registryButton.click();
+      browser.manage().timeouts().implicitlyWait(1500);
     });
 
     it('should have a title named Registry', async () => {
@@ -159,7 +160,8 @@ describe('e2eProject', () => {
       
       await login.writeInput('email', emailContent);
       await login.writeInput('password', passwordContent);   
-      await login.checkButtonClickable(buttonIdentifier);  
+
+      await login.checkButtonClickable(buttonIdentifier);
       await loginButton.click();
     });
 
