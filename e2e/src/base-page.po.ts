@@ -85,14 +85,14 @@ export class PageObjectBase {
 
   async getInputText(input: string): Promise<string> {
     const ionTextfield = this.getElement(`ion-item ion-input[formControlName="${input}"]`);
-    await browser.wait(ExpectedConditions.visibilityOf(ionTextfield), 4000);
+    await browser.wait(ExpectedConditions.elementToBeClickable(ionTextfield), 4000);
     const inputContent = await ionTextfield.getAttribute("value");
     return inputContent;
   }
 
   async getTextfieldText(input: string): Promise<string> {
     const ionTextfield = this.getElement(`ion-textarea[formControlName="${input}"]`);
-    await browser.wait(ExpectedConditions.visibilityOf(ionTextfield), 4000);
+    await browser.wait(ExpectedConditions.elementToBeClickable(ionTextfield), 4000);
     const inputContent = await ionTextfield.getAttribute("value");
     return inputContent;
   }

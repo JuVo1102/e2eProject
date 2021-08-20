@@ -208,6 +208,8 @@ describe('e2eProject', () => {
     it('should have an input for a note title and a text', async () => {
       const title = "title";
       const content = "content";
+      const titleElement = newNote.getElement('ion-title');
+      await browser.wait(ExpectedConditions.elementToBeClickable(titleElement), 4000);
 
       await newNote.writeInput('title', title);
       await newNote.writeTextfield('text', content);
@@ -238,6 +240,7 @@ describe('e2eProject', () => {
                
       const newNoteButton = await newNote.getElement(buttonIdentifier);
       const textfieldContent = await newNote.getTextfieldText("text");
+      browser.manage().timeouts().implicitlyWait(1000);
       if(textfieldContent.length > 0) {
         await titleElement.click()
       }

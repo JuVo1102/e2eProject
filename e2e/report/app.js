@@ -274,294 +274,294 @@ app.controller('ScreenshotReportController', ['$scope', '$http', 'TitleService',
         "description": "should display the mainscreen|app|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452660459,
-        "duration": 1321
+        "timestamp": 1629457380181,
+        "duration": 2205
     },
     {
         "description": "should have a title named Login|login|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452661809,
-        "duration": 1214
+        "timestamp": 1629457382406,
+        "duration": 2153
     },
     {
         "description": "should have an input for email and password|login|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452663029,
-        "duration": 2809
+        "timestamp": 1629457384562,
+        "duration": 3839
     },
     {
         "description": "should have a disabled button Login|login|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed",
         "browserLogs": [],
-        "timestamp": 1629452665845,
-        "duration": 4062
+        "timestamp": 1629457388404,
+        "duration": 5123
     },
     {
         "description": "should have a clickable button Registry|login|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed",
         "browserLogs": [],
-        "timestamp": 1629452669912,
-        "duration": 4025
+        "timestamp": 1629457393530,
+        "duration": 5161
     },
     {
         "description": "should have a clickable button Login when inputs for email and password are given and valid|login|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed",
         "browserLogs": [],
-        "timestamp": 1629452673945,
-        "duration": 5693
+        "timestamp": 1629457398695,
+        "duration": 6061
     },
     {
         "description": "should have a title named Registry|registry|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452679645,
-        "duration": 1855
+        "timestamp": 1629457404759,
+        "duration": 2438
     },
     {
         "description": "should have an input for email, password and confirm-password|registry|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452681505,
-        "duration": 4200
+        "timestamp": 1629457407210,
+        "duration": 4225
     },
     {
         "description": "should have a disabled button Submit|registry|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed",
         "browserLogs": [],
-        "timestamp": 1629452685710,
-        "duration": 4262
+        "timestamp": 1629457411438,
+        "duration": 5131
     },
     {
         "description": "should have an alert notification for the input definition|registry|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452689978,
-        "duration": 1733
+        "timestamp": 1629457416572,
+        "duration": 2371
     },
     {
         "description": "should have an alert notification if password was not confirmed correctly|registry|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452691717,
-        "duration": 3389
+        "timestamp": 1629457418952,
+        "duration": 3604
     },
     {
         "description": "should have a clickable button Submit when inputs are given and valid|registry|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed",
         "browserLogs": [],
-        "timestamp": 1629452695112,
-        "duration": 7175
+        "timestamp": 1629457422563,
+        "duration": 7188
     },
     {
         "description": "should have a title named Notes|homepage|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452702292,
-        "duration": 8274
+        "timestamp": 1629457429754,
+        "duration": 7576
     },
     {
         "description": "should have a button to navigate to the new-notes page|homepage|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed",
         "browserLogs": [],
-        "timestamp": 1629452710572,
-        "duration": 8918
+        "timestamp": 1629457437338,
+        "duration": 8769
     },
     {
         "description": "should have a title named Create New Note|new-note|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452719495,
-        "duration": 5587
+        "timestamp": 1629457446110,
+        "duration": 4838
     },
     {
         "description": "should have an input for a note title and a text|new-note|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452725088,
-        "duration": 6316
+        "timestamp": 1629457450955,
+        "duration": 6115
     },
     {
         "description": "should have a button to create notes|new-note|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed",
         "browserLogs": [],
-        "timestamp": 1629452731410,
-        "duration": 7991
+        "timestamp": 1629457457073,
+        "duration": 7482
     },
     {
         "description": "should create a new note|new-note|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452739406,
-        "duration": 7843
+        "timestamp": 1629457464558,
+        "duration": 7162
     },
     {
         "description": "should have a title named title|note-detail|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452747257,
-        "duration": 5279
+        "timestamp": 1629457471726,
+        "duration": 4957
     },
     {
         "description": "should have a text with the content: content|note-detail|e2eProject",
         "passed": true,
         "pending": false,
-        "os": "LINUX",
-        "instanceId": 11468,
+        "os": "MAC",
+        "instanceId": 3326,
         "browser": {
             "name": ""
         },
         "message": "Passed.",
         "trace": "",
         "browserLogs": [],
-        "timestamp": 1629452752541,
-        "duration": 5346
+        "timestamp": 1629457476689,
+        "duration": 4949
     }
 ];
 
